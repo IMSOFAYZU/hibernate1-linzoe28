@@ -22,7 +22,11 @@ public class NewMain2 {
         EntityManager em=Persistence.createEntityManagerFactory("database_systems").createEntityManager();
         em.getTransaction().begin();
         //use em.persist to insert a new Bar
-        
+        Bar bar=new Bar();
+        bar.setName("test1");
+        bar.setLicense("ase");
+        bar.setAddr("123");
+        em.persist(bar);
         /////////////////////////////////////
         em.getTransaction().commit();
         em.close();

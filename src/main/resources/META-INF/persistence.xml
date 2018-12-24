@@ -3,11 +3,13 @@
   <persistence-unit name="database_systems" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>rocks.imsofa.jpasample1.Bar</class>
+    <class>rocks.imsofa.jpasample1.Employee</class>
+    <class>rocks.imsofa.jpasample1.Bars</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/database_systems?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="len1028"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
       <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
     </properties>
   </persistence-unit>

@@ -23,7 +23,11 @@ public class NewMain1 {
         // TODO code application logic here
         EntityManager em=Persistence.createEntityManagerFactory("database_systems").createEntityManager();
         //use jpql select b from Bar b where b.name=?1 to select objects
-        
+        Query query=em.createQuery("select x from Bar x where x.name=?1");
+        query.setParameter(1, "Sue's");
+        List list= query.getResultList();
+        Bar bar=(Bar) list.get(0);
+        System.out.print(bar);
         //////////////////////////////////////////////////////////////////
         em.close();
         System.exit(0);

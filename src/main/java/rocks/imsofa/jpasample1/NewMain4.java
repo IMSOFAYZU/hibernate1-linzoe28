@@ -22,7 +22,8 @@ public class NewMain4 {
         EntityManager em=Persistence.createEntityManagerFactory("database_systems").createEntityManager();
         em.getTransaction().begin();
         //use em.find and em.remove
-        
+        Bar bar =em.find(Bar.class, "test1");
+        em.remove(bar);
         //////////////////////////////
         em.getTransaction().commit();
         em.close();
